@@ -21,7 +21,6 @@ def sequare_list_elements(number):
         print("enter the valide list")
 number = ["suresh","janardhan","harsha"]
 result = sequare_list_elements(number)
-print(result)
 
 
 
