@@ -4,6 +4,7 @@ import os
 emp_id = 0
 employee_database = dict()
 
+
 def get_empid():
     """ @param: None
         @desc: Return the employee Id
@@ -12,6 +13,7 @@ def get_empid():
     global emp_id
     emp_id = emp_id + 1
     return emp_id
+
 
 def remove_employee_data(employee_id):
     """ @param: int
@@ -24,6 +26,7 @@ def remove_employee_data(employee_id):
             return True
     return False
 
+
 def get_employee_data(employee_id):
     """ @param: int
         @desc: Check the Employee id from the database and get the data from database
@@ -35,6 +38,7 @@ def get_employee_data(employee_id):
             emp_data = employee_database[emp_id]
             return emp_data
     return emp_data
+
 
 def display_emp_details(employee_id):
     """ @param: int
@@ -53,6 +57,7 @@ def display_emp_details(employee_id):
     else:
         print("No Data Found ...")
 
+
 def welcome_page():
     """ @param: None
         @desc: Display the home page
@@ -68,3 +73,16 @@ def welcome_page():
     print(" Exit the Apllication Enter number           : 4")
     choice = int(input("\nEnter your choice : "))
     return choice
+
+
+def get_emp_salary_input(msg = "Enter employee salary:"):
+    """ @param: string
+        @desc: Receive the input from the user and validating the data
+        @returns: int
+    """
+    try:
+        sal = int(input(msg))
+    except ValueError:
+        print("Invalid input, enter a valid input ex: 20000")
+        sal = get_emp_salary_input(msg)
+    return sal
