@@ -3,6 +3,7 @@
 import os
 emp_id = 0
 employee_database = dict()
+emp_des=['Project Lead','Manager','Team Leader','Senior Devloper','Junior Devloper']
 
 def get_empid():
     """ @param: None
@@ -68,3 +69,16 @@ def welcome_page():
     print(" Exit the Apllication Enter number           : 4")
     choice = int(input("\nEnter your choice : "))
     return choice
+    
+def Designation(designation):
+    """ @parm:Employee Designation
+        @desc:add Designation to Employee Details
+        @return:str
+    """
+    while True:
+        if designation in emp_des:
+            return designation
+            break
+        else:
+            print('Enter the valid Designation:',emp_des)
+        designation = input("Enter Employee Designation : ").strip()

@@ -15,7 +15,7 @@ def main():
             age = input("Enter Age:")
             ph_num = input("Enter Employee Phone Number: ")
             address = input("Enter Employee Address : ")
-            designation = input("Enter Employee Designation : ")
+            designation = Designation(input("Enter Employee Designation : ").strip())
             sal = input("Enter Employee Salary: ")
             emp_id = get_empid()
             emp_data = [name, age, ph_num, address, designation, sal]
