@@ -75,14 +75,14 @@ def welcome_page():
     return choice
 
 
-def get_salary(msg = "Enter employee salary:"):
+def get_emp_salary_input(msg = "Enter employee salary:"):
     """ @param: string
         @desc: Receive the input from the user and validating the data
         @returns: int
     """
     try:
-        inp = int(input(msg))
+        sal = int(input(msg))
     except ValueError:
-        print("invalid input,enter an integer...")
-        inp = get_salary(msg)
-    return inp
+        print("Invalid input, enter a valid input ex: 20000")
+        sal = get_emp_salary_input(msg)
+    return sal
