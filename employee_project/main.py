@@ -2,6 +2,17 @@
 import os
 import time
 from employee import *
+import re
+
+def emp_address():
+    regex = re.compile(r'[a-zA-Z0-9,-/ ]*$')
+    while True:
+        address = input("Enter Employee Address : ")
+        if (regex.match(address)):
+            return address
+        else:
+            print('Please reenter address using special caracters as " ,  - / " only')
+
 
 
 def main():
@@ -14,7 +25,7 @@ def main():
             name = input("Enter Employee Name: ")
             age = input("Enter Age:")
             ph_num = input("Enter Employee Phone Number: ")
-            address = input("Enter Employee Address : ")
+            address = emp_address()
             designation = input("Enter Employee Designation : ")
             sal = get_emp_salary_input ("Enter Employee Salary: ")
             emp_id = get_empid()
