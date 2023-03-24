@@ -97,3 +97,22 @@ def get_emp_salary_input(msg = "Enter employee salary:"):
         print("Invalid input, enter a valid input ex: 20000")
         sal = get_emp_salary_input(msg)
     return sal
+
+
+def get_employee_name():
+    """ @param: string
+        @desc: This Method receives the input from the user and validating the name .
+        @returns: string
+    """
+    while True:
+        min_length_name = 3
+        max_length_name = 15
+        employee_name = input("Enter the  Employee Name:")
+        length_name = len(employee_name)
+        if employee_name.isalpha() == True or ' ' in employee_name:
+            if (min_length_name < length_name and max_length_name > length_name):
+                 return employee_name
+            else:
+                print("Enter the minmum 3 chacters and maximun 15 characters :")
+        else:
+            print("Invalid name entered , Please provide the valid name:")
