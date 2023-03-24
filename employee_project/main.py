@@ -11,7 +11,7 @@ def main():
         if choice == 1:
             os.system("cls")
             print("***************** REGISTER EMPLOYEE DETAILS ******************************\n\n")
-            name = input("Enter Employee Name: ")
+            name = employee_name(input("Enter Employee Name: "))
             age = input("Enter Age:")
             ph_num = input("Enter Employee Phone Number: ")
             address = input("Enter Employee Address : ")
