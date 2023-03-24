@@ -3,7 +3,6 @@ import os
 import time
 from employee import *
 
-
 def main():
 
     while True:
@@ -14,7 +13,7 @@ def main():
             name = input("Enter Employee Name: ")
             age = input("Enter Age:")
             ph_num = input("Enter Employee Phone Number: ")
-            address = input("Enter Employee Address : ")
+            address = get_emp_address()
             designation = input("Enter Employee Designation : ")
             sal = get_emp_salary_input ("Enter Employee Salary: ")
             emp_id = get_empid()
