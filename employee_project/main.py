@@ -16,7 +16,7 @@ def main():
             ph_num = input("Enter Employee Phone Number: ")
             address = input("Enter Employee Address : ")
             designation = input("Enter Employee Designation : ")
-            sal = input("Enter Employee Salary: ")
+            sal =get_salary ("Enter Employee Salary: ")
             emp_id = get_empid()
             emp_data = [name, age, ph_num, address, designation, sal]
             employee_database[emp_id] = emp_data
