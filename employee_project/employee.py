@@ -10,10 +10,10 @@ def get_emp_address():
     data_limit_reg = re.compile(r'[a-zA-Z0-9,-/ ]*$')
     while True:
         address = input("Enter Employee Address : ")
-        if (data_limit_reg.match(address)):
+        if (data_limit_reg.match(address)) and len(address) <= 150:
             return address
         else:
-            print('Address not valid please enter the address again, Suggestion: use only ", - / " as operators')
+            print('Address not valid please enter the address again, Suggestion: use only ", - / " as operators or no. of caracters not morethan 150')
 
 
 def get_empid():
