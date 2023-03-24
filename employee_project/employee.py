@@ -5,6 +5,12 @@ import re
 emp_id = 0
 employee_database = dict()
 
+def get_emp_age():
+    while True:
+        age = int(input('Enger age : '))
+        if age>=18 and age<=60:
+            return age
+        print('Invalid age entered, please re-enter age, Suggestion: Enter number format and Age in between 18 and 60 only')
 
 def get_emp_address():
     data_limit_reg = re.compile(r'[a-zA-Z0-9,-/ ]*$')

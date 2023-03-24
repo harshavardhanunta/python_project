@@ -11,7 +11,7 @@ def main():
             os.system("cls")
             print("***************** REGISTER EMPLOYEE DETAILS ******************************\n\n")
             name = input("Enter Employee Name: ")
-            age = input("Enter Age:")
+            age = get_emp_age()
             ph_num = input("Enter Employee Phone Number: ")
             address = get_emp_address()
             designation = input("Enter Employee Designation : ")
