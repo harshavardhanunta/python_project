@@ -68,3 +68,23 @@ def welcome_page():
     print(" Exit the Apllication Enter number           : 4")
     choice = int(input("\nEnter your choice : "))
     return choice
+
+
+def employee_name(employee_name):
+    while True:
+        employee_details = {}
+        Name_min = 3
+        Name_max = 15
+        name = input("Enter the  employee_name:")
+        length_name = len(employee_name)
+        if name.isalpha() == True or ' ' in name:
+            if (Name_min < length_name and Name_max > length_name):
+                employee_details["Employee_Name"] = name
+                print(employee_details)
+                break
+            else:
+                print("Enter the minmum 3 chacters and maximun 15 characters :")
+        else:
+            print("provide the valide name")
+
+
