@@ -5,3 +5,4 @@ ADDRESS_REG = r'[a-zA-Z0-9,-/ ]*$'
 MAX_AGE = 22
 MIN_AGE = 65
 MIN_ADDRESS_LENGTH = 150
+
