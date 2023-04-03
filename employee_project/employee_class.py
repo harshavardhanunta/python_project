@@ -6,10 +6,9 @@ emp_id = 0
 employee_database = dict()
 
 
-class Employeeinfo():
+class EmployeeInfo():
     """
-    My Employee_info class works get the employee details and add the employee details and delete the employee details and
-    display the employee details
+     EmployeeInfo class handled the all the employee related functionalities.
     """
     def __init__(self, name, age, phone_number, address, designation, salary):
         """
@@ -65,15 +64,15 @@ class Employeeinfo():
 
     def get_emp_age(self, age):
         """ @parm: str
-            @desc: add age to Employee Details
-            @return: str
+            @desc: get the age of the employee from the database
+            @return: int
         """
         while True:
             try:
 
                 age = int(age)
                 if age >= MAX_AGE and age <= MIN_AGE:
-                    return str(age)
+                    return age
                 else:
                     print('Enter the valid age between 22 to 65')
             except ValueError:
@@ -104,7 +103,6 @@ class Employeeinfo():
         while True:
             if (data_limit_reg.match(address)) and len(address) <= MIN_ADDRESS_LENGTH:
                 return address
-                break
             else:
                 print('Address not valid please enter the address again, Suggestion: use only ", - / " as operators or no. of caracters not morethan 150')
                 address = input("Enter Employee Address : ")
