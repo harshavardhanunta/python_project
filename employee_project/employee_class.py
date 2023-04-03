@@ -180,7 +180,7 @@ class Employeeinfo():
         """
         for emp_id in employee_database:
             if emp_id == employee_id:
-                emp_data = self.get_employee_data(employee_id)
+                emp_data  = self.get_employee_data(employee_id)
                 #emp_data.emp_delete()
                 return True
         return False
