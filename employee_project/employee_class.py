@@ -71,8 +71,8 @@ class Employeeinfo():
         while True:
             try:
 
-                age=int(age)
-                if age>=MAX_AGE and age<=MIN_AGE:
+                age = int(age)
+                if age >= MAX_AGE and age <= MIN_AGE:
                     return str(age)
                 else:
                     print('Enter the valid age between 22 to 65')
