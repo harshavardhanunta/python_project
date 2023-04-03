@@ -2,7 +2,7 @@ import os
 import time
 from employee_class import *
 def main():
-    employee_obj = Employee_info("", "", '', '', '', '')
+    employee_obj = Employeeinfo("", "", '', '', '', '')
     while True:
         choice = welcome_page()
         if choice == 1:
@@ -15,7 +15,7 @@ def main():
             designation = employee_obj.get_emp_designation(input("Enter the designation:") )
             salary = employee_obj.get_emp_salary(input("Enter Employee Salary:"))
             emp_id = get_empid()
-            emp_obj = Employee_info(name, age, phone_number, address, designation, salary)
+            emp_obj = Employeeinfo(name, age, phone_number, address, designation, salary)
             employee_database[emp_id] = emp_obj
             os.system("cls")
             print("\n****************Verify Employee Details***************\n")
